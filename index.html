@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>인내는 쓰고, 열매는 달다.</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+		@font-face { font-family: 'TmonMonsori'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff'); font-weight: normal; font-style: normal; }
+		#monitor{position:fixed; background:black; padding:5px; top:0; right:0; width:70px; height:20px; color:white;}
+		html{font-family: 'Noto Sans KR', sans-serif;}
+		header .wrap, footer .wrap{width:100%;}
+		header .wrap{background:url(spa.gif); background-repeat: no-repeat; background-size:cover;}
+		.wrap{ width:1200px; margin:auto; background:#ddd; height:800px; position:relative;}
+		body, h1, p{margin:0; padding:0;}
+		h1{font-family: 'RIDIBatang';}
+		header .wrap h1{color:white; position:absolute; top:300px; left:calc(50% - 405.6px); text-shadow: 8px 8px 0px black; font-size:80px;}
+		.pan{background:black; height:800px; opacity:0; transition: all 1s}
+		.pan:hover{opacity:0.7}
+		#record{margin:auto; display:block; width:500px; position:fixed; left:calc(50% - 250px); top:230px;}
+		#record2{margin:auto; display:block; width:500px; position:fixed; left:calc(50% + 100px); top:210px;}
+		#record3{margin:auto; display:block; width:500px; position:fixed; left:calc(50% - 600px); top:230px;}
+		#rec{display:block; width:150px; margin-top: 200px; position:absolute; margin-left:330px; top:80px;}
+		#rec2{display:block; width:200px; margin-top: 250px; position:absolute; margin-left:650px; top:70px;}
+		#rec3{display:block; width:250px; margin-top: 250px; position:absolute; margin-left:1000px; top:100px;}
+		.h1{top:100px; position:absolute; left:calc(20% - 161px); opacity:1; font-size:50px; color:white; z-index:100;}
+		.h2{top:100px; position:absolute; left:calc(60% - 150px); font-size:50px;}
+		.p1{width:300px; position:absolute; top:250px; font-size:10pt; line-height:1.8; opacity:1; left:calc(30% - 150px); z-index:12;}
+
+		.p2{width:300px; position:absolute; left:calc(70% - 150px); top:230px; font-size:10pt; line-height:1.8; opacity:0;}
+		#img1{width:500px; opacity:0; top:200px; margin-left:50%; position:absolute; z-index:10;}
+		#img2{width:100px; top:200px; position:absolute; margin-left:53%; opacity:0; z-index:12;}
+		#img3{width:100px; top:350px; position:absolute; margin-left:48%; opacity:0; z-index:12;}
+		#img4{width:100px; top:350px; position:absolute; margin-left:85%; opacity:0; z-index:12;}
+		#img5{width:100px; top:200px; position:absolute; margin-left:80%; opacity:0; z-index:12;}
+		#img6{width:1200px; bottom:0px; position:absolute; opacity:0; z-index:0; right:0px;}
+		footer .wrap{height:150px; background:black; color:white;}
+		footer p{text-align:center; color:white; width:inherit; padding-top:50px;}
+
+		.s1 .wrap{background:black;}
+		body .s1{background:black;}
+
+		body .s4{background:url(back2.gif);}
+
+		body .s6{background:blue;}
+
+		body .s8{background:url(spa.gif);}
+
+		.whi{background:black; height:800px; opacity:1; width:1500px; position:absolute; z-index:20;}
+
+		#h5{top:280px; position:absolute; margin-left:10%; opacity:0; font-size:50px;}
+
+		@keyframes ltor{
+			from{left:-700px; opacity:0;}
+			to{left:0px; opacity:1;}
+		}
+
+		@keyframes ltor2{
+			from{top:-400px; left:-400px; opacity:0;}
+			to{top:0px; left:0px; opacity:1;}
+		}
+
+		@keyframes rtol{
+			from{right:0px; opacity:0; transform:rotate(-40deg);}
+			to{right:600px; opacity:1; transform:rotate(40deg);}
+		}
+
+		@keyframes bt0{
+			from{top:-100px; opacity:0;}
+			to{top:0px; opacity:1;}
+		}
+
+		@keyframes bt{
+			from{top:300px; opacity:0;}
+			to{top:80px; opacity:1;}
+		}
+
+		@keyframes bt2{
+			from{top:550px; opacity:0;}
+			to{top:250px; opacity:1;}
+		}
+
+		@keyframes bt3{
+			from{top:300px; opacity:0;}
+			to{top:200px; opacity:1;}
+		}
+
+		@keyframes bt4{
+			from{top:550px; opacity:0;}
+			to{top:350px; opacity:1;}
+		}
+
+		@keyframes btrabbit{
+			from{bottom:80px; opacity:1; width:300px; left:300px;}
+			to{bottom:630px; opacity:0; width:150px; left:500px;}
+		}
+
+		@keyframes btturtle{
+			from{bottom:80px; opacity:1; width:300px;}
+			to{bottom:200px;}
+		}
+
+		@keyframes opa2{
+			from{opacity:1;}
+			to{opacity:0;}
+		}
+
+		@keyframes opa{
+			from{opacity:1;}
+			to{opacity:0;}
+		}
+
+		@keyframes opac{
+			from{opacity:0;}
+			to{opacity:1;}
+		}
+
+		.rr{width:10px; height:30px; float:left;}
+		.rr:hover{opacity:0;}
+
+		@keyframes uptur{
+			from{top:1400px;}
+			to{top: 900px;}
+		}
+
+		@keyframes slideinf{
+			from{top:0%;}
+			to{top:60%;}
+		}
+
+		@keyframes slideinb{
+			from{top:60%;}
+			to{top:0%;}
+		}
+
+		@keyframes rtol1{
+			from{left:1700px; opacity:0;}
+			to{left:1250px; opacity:1;}
+		}
+
+		@keyframes btfing1{
+			from{left:1300px; bottom:-500px; opacity:0;}
+			to{left:1100px; bottom:0px; opacity:1;}
+		}
+		@keyframes btfing2{
+			from{bottom:-500px; opacity:0;}
+			to{bottom:-20px; opacity:1;}
+		}
+
+		@keyframes scal{
+			from{width:120px; height:80px;}
+			to{width:480px; height:320px;}
+		}
+
+		@keyframes ro{
+			from{transform:rotate(-30deg);}
+			to{transform:rotate(30deg);}
+		}
+
+		@keyframes tb1{
+			0% {top:0%; left:0%}
+			25%{top:100%; left:80%}
+			50%{top:0%; left:30%}
+			75%{top:100%; left:50%}
+			100% {top:0%; left:100%}
+		}
+
+		.noli2{width:20px; height:20px; background:white; position:absolute; animation: tb1 20s alternate infinite ease-in; left:500px; border-radius:100%; z-index:110;}
+
+		@keyframes rtol3{
+			from{right:-500px;}
+			to{right:500px;}
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<div class="pan"></div>
+			<img src="aristo.png" id="record">
+			<img src="bush.png" id="record2">
+			<img src="ruso.png" id="record3">
+			<img src="bang.gif" id="rec">
+			<img src="bang.gif" id="rec2">
+			<img src="bang.gif" id="rec3">
+			<h1 style="z-index:10;">인내는 쓰고, 열매는 달다.</h1>
+			<p id="aris" style="position:absolute; z-index:0; top:0px; animation:slideinf 10s infinite alternate; writing-mode: tb-rl; left:calc(50% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내는 용기와 굉장히 비슷해서 용기의 언니 또는 어머니로 보일 정도다 - 아리스토텔레스
+				</span>
+			</p>
+			<p id="bu" style="position:absolute; z-index:0; top:0px; animation:slideinb 10s infinite alternate; writing-mode: tb-rl; left:calc(27% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내심은 아이가 깨달아야 하는 첫번째 교훈이다. - 장자크 루소
+				</span>
+			</p>
+			<p id="ru" style="position:absolute; z-index:0; top:0px; animation:slideinb 10s infinite alternate; writing-mode: tb-rl; left:calc(75% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내심을 갖추는 것만으로도 위대하고 고귀한 힘을 가진 것이다. - 호레이스 부쉬넬
+				</span>
+			</p>
+		</div>
+	</header>
+	<section class="s1">
+		<div class="wrap" id="s1">
+			<canvas id="myCanvas" width="480" height="320" style="background:black; position:absolute; margin-left:35%; margin-top: 200px; z-index:11; border:1px solid yellow;"></canvas>
+			<h2 class="h1" id="h1" style="opacity:0;">1. 토끼와 거북이</h2>
+			<p class="p1" id="text1" style="padding:20px; opacity:0; background:yellow;">토끼와 거북이가 달리기 경주를 시작했다. 육지에서 느린 거북이가 질 것이 뻔해보였다. </p>
+			<img src="turtle.png" style="position:absolute; width:150px; z-index:13; bottom:100px; left:0px;" id="zizi">
+			<img src="turtle.png" id="img1" class="ho">
+			<div id="sea" class="rr"></div>
+			<img src="light.gif" id="img2">
+			<img src="light.gif" id="img3">
+			<img src="light.gif" id="img4">
+			<img src="light.gif" id="img5">
+			<img src="stream4.png" id="img6">
+		</div>
+	</section>
+	<section class="s2">
+		<div class="wrap" style="width:100%; background:url(loading.gif); background-size:200px;" id="s22">
+			<img src="file.gif" id="file" style="position:absolute; left:calc(50% - 190.5px); top:250px;">
+		</div>
+	</section>
+		<section class="s3">
+		<div class="wrap" style="width:100%; background:black; background-size:cover; overflow: hidden;" id="s2">
+			<canvas id="myCanvas2" width="1200" height="250" style="background:url(speed.gif); position: absolute; border:1px solid yellow; margin-left:10%; margin-top: 200px; z-index: 11"></canvas>
+			<h2 class="h2" id="h4" style="color:white;opacity:1;position:absolute; z-index: 12; opacity:0;">2. 경주 시작</h2>
+			<p class="p2" style="padding:20px; background:black;color:black; background:yellow; z-index:12;opacity:0;" id="t2">경주가 시작되자, 역시나 토끼가 앞장 섰다. 모두가 예상했던 바였다.</p>
+			<img src="track.png" id="img31" style="position:absolute; width:100%; z-index:0; margin-bottom:400px;">
+			<img src="rabbit.png" id="rab" style="position:absolute; width:300px; z-index:12; bottom:80px; left:300px;">
+			<img src="seaturtle.png" id="turtle" style="position:absolute; width:300px; z-index:12; bottom:80px; left:900px;">
+			<img src="fingering2.png" id="fingering2" style="position:absolute; width:700px; z-index:12; bottom:30px; left:0px; opacity:0;">
+			<img src="fingering2.png" id="fingering22" style="position:absolute; width:700px; z-index:12; top:0px; left:0px; transform:rotate(40deg); opacity:0;">
+			<img src="fingering.png" id="fingering1" style="position:absolute; width:500px; z-index:12; bottom:450px; left:1250px; opacity:0; transform:rotate(-20deg);">
+			<img src="fingering.png" id="fingering11" style="position:absolute; width:400px; z-index:12; bottom:0px; left:1100px; transform:rotate(40deg); opacity:0;">
+			<img src="fingering.png" id="fingering12" style="position:absolute; width:400px; z-index:12; bottom:-20px; left:800px; transform:rotate(80deg); opacity:0;">
+			<img src="mouse.png" id="mouse" style="position:absolute; width:300px; z-index:0; top:0px; right:0px; transform:rotate(-40deg); opacity:0;">
+
+		</div>
+	</section>
+	<section class="s4">
+		<div class="wrap" style="width:100%; background:none; background-size:cover; overflow:hidden" id="s4">
+			<img src="error.gif" style = "margin-top: 290px; position:absolute; margin-left:300px;">
+			<img src="error.gif" style = "width:250px; margin-top: 320px; position:absolute; margin-left:650px;">
+			<img src="error.gif" style = "width:200px; margin-top: 350px; position:absolute; margin-left:1050px">
+		</div>
+	</section>
+	<section class="s5">
+		<div class="wrap" id="s5" style="width:100%; background:black; background-size:cover; overflow:hidden">
+			<canvas id="myCanvas3" width="480" height="480" style="background:url(bang.gif); background-size:cover; position:absolute; margin-left:35%; margin-top: 200px; z-index:11; border:1px solid yellow;"></canvas>
+			<h2 class="h1" id="h5" style="opacity:0;">3. 거북이의 인내</h2>
+			<p class="p1" id="text5" style="padding:20px; opacity:0; background:yellow;">토끼가 보이지 않아도. 눈 앞이 빙글빙글 돌아 앞이 보이지 않아도. 거북이는 계속 달렸다. </p>
+			<div id="block1" style="width:75px; height:20px; background:gray; position:absolute; margin-top:-20px;"></div>
+			<div class="noli2" id="ttt"></div>
+			<img src="bigturtle.gif" id="bigtur"style="margin-left:calc(50% - 450px); position:absolute; z-index:10; width:900px; opacity:0;">
+			
+		</div>
+		
+	</section>
+	<section class="s6">
+		<div class="wrap" id="s6" style="width:100%; background:none; background-size:cover; overflow:hidden;">
+			<img src="win.gif" style="position:absolute; margin-left:calc(50% - 300px); width:600px; top:100px;">
+			<img src="baterry.gif" style="position:absolute; left:200px; width:100px; top:100px;">
+			<img src="wifi.gif" style="position:absolute; left:1200px; width:150px; top:80px;">
+			
+	</section>
+	<section class="s7">
+		<div class="wrap" id="s7" style="width:100%; background:black; background-size:cover; overflow:hidden;">
+			<canvas id="myCanvas4" width="480" height="320" style="background:url(leafap.png); background-size:cover; position:absolute; margin-left:35%; margin-top: 200px; z-index:11; border:1px solid yellow;"></canvas>
+			<h2 class="h2" id="h7" style="color:white;opacity:0;position:absolute; z-index: 12;">4. 인내의 열매</h2>
+			<p class="p2" style="padding:20px;color:black; background:yellow; z-index:12; opacity:0;" id="t7">끝까지 참고 견딘 거북이는 결국 토끼를 이기고 인내의 열매를 얻었다.</p>
+			<img src="seaturtle.png" id="tur2"style="position:absolute; width:500px; z-index:12; bottom:80px; left:calc(50% - 250px);">
+			<img src="clap.gif" id="clap"style="position:absolute; width:500px; z-index:12; bottom:80px; left:70px;">
+			<img src="clap.gif" id="clap2"style="position:absolute; width:500px; z-index:12; bottom:80px; left:1000px;">
+			<img src="apple.png" id="appleone"style="position:absolute; width:100px; z-index:0; top:0px; left:0px;">
+		</div>
+	</section>
+	<section class="s8">
+		<div class="wrap" id="s7" style="width:100%; background:none; background-size:cover; overflow:hidden;">
+			<img src="leafap.png" style="left:200px; position:absolute; width:400px; top:100px;">
+			<img src="leafap.png" style="left:550px; position:absolute; width:400px; top:70px;">
+			<img src="leafap.png" style="left:930px; position:absolute; width:400px; top:130px;">
+						<p id="aris" style="position:absolute; z-index:0; top:0px; animation:slideinf 10s infinite alternate; writing-mode: tb-rl; left:calc(50% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내는 용기와 굉장히 비슷해서 용기의 언니 또는 어머니로 보일 정도다 - 아리스토텔레스
+				</span>
+			</p>
+			<p id="bu" style="position:absolute; z-index:0; top:0px; animation:slideinb 10s infinite alternate; writing-mode: tb-rl; left:calc(27% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내심은 아이가 깨달아야 하는 첫번째 교훈이다. - 장자크 루소
+				</span>
+			</p>
+			<p id="ru" style="position:absolute; z-index:0; top:0px; animation:slideinb 10s infinite alternate; writing-mode: tb-rl; left:calc(75% - 11.6px); line-height: 1.8;">
+				<span style="background:yellow;">
+					인내심을 갖추는 것만으로도 위대하고 고귀한 힘을 가진 것이다. - 호레이스 부쉬넬
+				</span>
+			</p>
+	</section>
+	<footer>
+		<div class="wrap">
+			<p>
+			@ 20191217 designed by ohyudeok
+			</p>
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+		for(var ii=0; ii<5; ii++){
+			var c = zizi.cloneNode(true);
+			c.id = ii;
+			c.style.width = Math.random()* 150 + "px";
+			c.style.left = Math.random() * 1400 + "px";
+			c.style.top = "1400px";
+			c.style.animation = "uptur 15s infinite";
+			c.style.animationDuration = Math.random()*10 + "s";
+			document.body.appendChild(c);
+		}
+
+		for(var iii=0; iii<50; iii++){
+			var d = block1.cloneNode(true);
+			d.id = iii;
+			d.style.left = Math.random()* 90 + "%";
+			d.style.marginTop = "4100px";
+			d.style.top =Math.random()* 550 + "px";
+			d.style.animation = "ro 5s infinite";
+			d.style.animationDuration = Math.random()*10 + "s";
+			document.body.appendChild(d);
+		}
+
+		for(var iiii=0; iiii<15; iiii++){
+			var e = appleone.cloneNode(true);
+			e.id = iiii;
+			e.style.left = Math.random()* 90 + "%";
+			e.style.marginTop = "5600px";
+			e.style.top =Math.random()* 550 + "px";
+			e.style.animation = "ro 5s infinite";
+			e.style.animationDuration = Math.random()*10 + "s";
+			document.body.appendChild(e);
+		}
+
+			//여기서부터 초재기시작임
+		    var time = 0;
+		    var running = 0;
+
+		    var timeD = setInterval(startPause,100);
+
+		    function startPause(){
+		     if(running == 0){
+		     running = 1;
+		     increment();
+		     document.getElementById("startPause").innerHTML = "Pause";
+		     }else {
+		     running = 0;
+		     document.getElementById("startPause").innerHTML = "Resume";
+		     }
+		     
+		    }
+
+
+		    function reset(){
+		     running = 0;
+		     time = 0;
+		     document.getElementById("startPause").innerHTML = "Start"; 
+		     document.getElementById("output").innerHTML = "00:00:00";
+		    }
+
+
+		    function increment(){
+		     if(running == 1){
+		     setTimeout(function(){
+		     time++;
+		     var mins = Math.floor(time/10/60);
+		     var secs = Math.floor(time/10);
+		     var tenths = time % 10;
+		     
+		     if(mins < 10){
+		     mins = "0" + mins;
+		     }
+		     if(secs < 10){
+		     secs = "0" + secs;
+		     }
+		     
+		     document.getElementById('output').innerHTML = mins + ":" + secs + ":" + "0" + tenths;
+		     increment();
+		     
+		     }, 100);
+		     }
+		    }
+		    //여기까지 초재는 거임
+
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		if(t > 300){ h1.style.animation = "bt 2s forwards";}
+		else{h1.style.animation = "";}
+		if(t > 300){ text1.style.animation = "bt2 2.5s forwards";}
+		else{text1.style.animation = "";}
+		if(t > 300){ img1.style.animation = "bt3 2.5s forwards";}
+		else{img1.style.animation = "";}
+		if(t > 300){ img3.style.animation = "bt4 2.5s forwards";}
+		else{img3.style.animation = "";}
+		if(t > 300){ img4.style.animation = "bt4 2.5s forwards";}
+		else{img4.style.animation = "";}
+		if(t > 300){ img2.style.animation = "bt3 2s forwards";}
+		else{img2.style.animation = "";}
+		if(t > 300){ img5.style.animation = "bt3 2s forwards";}
+		else{img5.style.animation = "";}
+		if(t > 300){ img6.style.animation = "opac 2s forward";}
+		else{img6.style.animation = "";}
+		if(t > 300){ myCanvas.style.animation = "opac 2s forward";}
+		else{myCanvas.style.animation = "";}
+		if(t > 1100){ s1.style.animation = "opa2 1.5s forwards";}
+		else{s1.style.animation = "";}
+		
+		if(t > 1900){ t2.style.animation = "bt2 2.5s forwards";}
+		else{t2.style.animation = "";}
+		if(t > 1900){ h4.style.animation = "bt 2s forwards";}
+		else{h4.style.animation = "";}
+		if(t > 1900){ img31.style.animation = "bt0 2s forwards";}
+		else{img31.style.animation = "";}
+		if(t > 1900){ rab.style.animation = "btrabbit 8s forwards";}
+		else{rab.style.animation = "";}
+		if(t > 1900){ turtle.style.animation = "btturtle 8s forwards";}
+		else{turtle.style.animation = "";}
+		if(t > 1900){ fingering2.style.animation = "ltor 2s forwards"; fingering2.style.animationDelay = "5s";}
+		else{fingering2.style.animation = "";}
+		if(t > 1900){ fingering22.style.animation = "ltor2 2s forwards"; fingering22.style.animationDelay = "5.5s";}
+		else{fingering22.style.animation = "";}
+		if(t > 1900){ mouse.style.animation = "rtol 8s infinite alternate"; mouse.style.animationDelay = "5.5s";}
+		else{mouse.style.animation = "";}
+		if(t > 2900){ s2.style.animation = "opa2 1.5s alternate forwards";}
+		if(t > 1900){ fingering1.style.animation = "rtol1 2s forwards"; fingering1.style.animationDelay = "3.5s";}
+		else{fingering1.style.animation = "";}
+		if(t > 1900){ fingering11.style.animation = "btfing1 2s forwards"; fingering11.style.animationDelay = "4s";}
+		else{fingering11.style.animation = "";}
+		if(t > 1900){ fingering12.style.animation = "btfing2 2s forwards"; fingering12.style.animationDelay = "4.5s";}
+		else{fingering12.style.animation = "";}
+		if(t > 2900){s2.style.animation = "opa2 1.5s forwards";}
+		else{s2.style.animation = "";}
+
+		if(t > 3500){ h5.style.animation = "bt 2s forwards";}
+		else{h5.style.animation = "";}
+		if(t > 3500){ text5.style.animation = "bt2 2.5s forwards";}
+		else{text5.style.animation = "";}
+		if(t > 3500){ bigtur.style.animation = "opac 2.5s forwards";}
+		else{bigtur.style.animation = "";}
+
+		if(t > 5000){ t7.style.animation = "bt2 2.5s forwards";}
+		else{t7.style.animation = "";}
+		if(t > 5000){ h7.style.animation = "bt 2s forwards";}
+		else{h7.style.animation = "";}
+		if(t > 5000){ tur2.style.animation = "opac 2s forwards";}
+		else{tur2.style.animation = "";}
+		if(t > 5000){ clap.style.animation = "opac 2s forwards";}
+		else{clap.style.animation = "";}
+		if(t > 5000){ clap2.style.animation = "opac 2s forwards";}
+		else{clap2.style.animation = "";}
+		if(t > 5000){ appleone.style.animation = "opac 2s forwards";}
+		else{appleone.style.animation = "";}
+
+		var canvas = document.getElementById("myCanvas2");
+		var ctx = canvas.getContext("2d");
+		var x = canvas.width/2;
+		var y = canvas.height-30;
+		var dx = 4; // 공이 2픽셀 움직인다는 것이냐?
+		var dy = -4;
+		var ballRadius = 10; //간단한 충돌방지: 공
+		var paddleHeight = 10;
+		var paddleWidth = 50; //패달의 너비>얠 크기 조절해버리면 진짜 사람 화나지.
+		var paddleX = (canvas.width-paddleWidth)/2;
+		var rightPressed = false;
+		var leftPressed = false;
+		var brickRowCount = 1; //벽돌 배열행 = r
+		var brickColumnCount = 13; //벽돌 열의 수 = c
+		var brickWidth = 75; // 벽돌 가로길이
+		var brickHeight = 20; //벽돌 세로길이
+		var brickPadding = 15; // 벽돌 간격
+		var brickOffsetTop = 30; // 벽돌이 캔버스의 모서리에 닿지 않게 할 오프셋 변수
+		var brickOffsetLeft = 30; // 벽돌이 캔버스의 모서리에 닿지 않게 할 오프셋 변수
+		var bricks = [];
+		for(var c=0; c<brickColumnCount; c++) {
+		    bricks[c] = [];
+		    for(var r=0; r<brickRowCount; r++) {
+		        bricks[c][r] = { x: 0, y: 0, status:1 };
+		    }
+		}
+		var score = 0; // 점수!!
+		var lives = 3; // 생명까지 주겠데...뭐하러?.. 다음 단계 넘어가는건 어케해염....?
+
+		document.addEventListener("keydown", keyDownHandler, false);
+		document.addEventListener("keyup", keyUpHandler, false);
+		document.addEventListener("mousemove", mouseMoveHandler, false);
+			
+			function keyDownHandler(e) {
+		    if(e.keyCode == 39) {
+		        rightPressed = true;
+		    }
+		    else if(e.keyCode == 37) {
+		        leftPressed = true;
+			    }
+			}
+			function keyUpHandler(e) {
+			    if(e.keyCode == 39) {
+			        rightPressed = false;
+			    }
+			    else if(e.keyCode == 37) {
+			        leftPressed = false;
+			    }
+			}
+
+			function mouseMoveHandler(e) {
+			    var relativeX = e.clientX - canvas.offsetLeft;
+			    if(relativeX > 0 && relativeX < canvas.width) {
+			        paddleX = relativeX - paddleWidth/2;
+			    }
+			}
+
+			function collisionDetection() {
+			    for(var c=0; c<brickColumnCount; c++) {
+			        for(var r=0; r<brickRowCount; r++) {
+			            var b = bricks[c][r];
+			            if(b.status == 1){
+				            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+				                dy = -dy;
+				                b.status = 0;
+				                score++;
+				                if(score == brickRowCount*brickColumnCount){
+				                	alert("YOU WIN, CONGRATUATS! GO, LEVEL 3!");
+				                	document.location.href = "level0111.html";
+				                }
+				            }
+			            }
+			        }
+			    }
+			}
+
+			function drawBall(){
+			ctx.beginPath();
+			ctx.arc(x, y, 10, 0, Math.PI*2);
+			ctx.fillStyle = "white";
+			ctx.fill();
+			ctx.closePath();
+			}
+
+			function drawPaddle() {
+		    ctx.beginPath();
+		    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+		    ctx.fillStyle = "white";
+		    ctx.fill();
+		    ctx.closePath();
+			}
+
+			function drawBricks() {
+			    for(var c=0; c<brickColumnCount; c++) {
+			        for(var r=0; r<brickRowCount; r++) {
+			        	if(bricks[c][r].status == 1){
+				            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+				            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+				            bricks[c][r].x = brickX;
+				            bricks[c][r].y = brickY;
+				            ctx.beginPath();
+				            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+				            ctx.fillStyle = "white";
+				            ctx.fill();
+				            ctx.closePath();
+					        }
+				        }
+				    }
+			    }
+			    
+
+			function drawScore() {
+			    ctx.font = "16px Arial";
+			    ctx.fillStyle = "white";
+			    ctx.fillText("Score: "+score, 8, 20); // 마지막 두개는 좌표래....
+			}
+
+			function drawLives() {
+			    ctx.font = "16px Arial";
+			    ctx.fillStyle = "white";
+			    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+			} // 이건 생명!
+			
+
+			function draw(){
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			drawBricks();
+			drawBall();
+			drawPaddle();
+			drawScore();
+			drawLives();
+			collisionDetection();
+
+			//if(x + dx > canvas.width || x + dx < 0) {
+    			//dx = -dx;
+				//}
+
+			//if(y + dy > canvas.height || y + dy < 0) {
+    		//dy = -dy;
+			//} <-얘네는 공이 캔버스 밖으로도 나다니게 만들어 버린다.
+
+			if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+	        dx = -dx;
+		    }
+
+		    if(y + dy < ballRadius) {
+		        dy = -dy;
+		    } else if(y + dy > canvas.height-ballRadius) {
+		    	if(x > paddleX && x < paddleX + paddleWidth) {
+		    		dy = -dy;
+		    	} 
+		    else {
+		    	lives--;
+		    	if(!lives) {
+		    	document.location.stop();
+		    	}
+		    	else{
+		    		x = canvas.width/2;
+		    		y = canvas.height-30;
+		    		dx = 4; // 여기도 같이 바꿔줘야 죽고 나서도 속도가 같다.
+		    		dy = -4; // 여기도 같이 바꿔줘야 죽고 나서도 속도가 같다: 공
+		    		paddleX = (canvas.width-paddleWidth)/2;
+		    	}
+		    	}
+			}
+
+		    if(rightPressed && paddleX < canvas.width-paddleWidth) {
+       			 paddleX += 7;
+		    }
+		    else if(leftPressed && paddleX > 0) {
+		        paddleX -= 7;
+		    } // 패달이 7픽셀 움직인다. + (rightPressed or leftPressed)하면 밖으로도 나다닌다. 움직임을 더 휙휙할 수 있겠다.
+
+			x += dx;
+    		y += dy;
+    		requestAnimationFrame(draw);
+			}
+			
+			draw();}
+		
+
+	</script>
+	<script type="text/javascript" src="./script-1.js"></script>
+
+
+</body>
+</html>
